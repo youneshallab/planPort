@@ -84,15 +84,16 @@ function SingleParking(props) {
       onMouseLeave={unsetHovered}
       >                                                            
         {props.parking.color === "#A1A1AA" && <div className='absolute h-full w-full crossed'></div>}
-        <p className='text-zinc-100 pt-0 text-center align-middle truncate text-[8px]'> 
+        <p className='text-zinc-100 text-center h-full w-full align-middle truncate text-[8px] flex content-center justify-center'> 
           {(props.parking.color === "#FF0000") && (isHovered ?
-           <p className='mt-1 '>{props.parking.nom}</p>:
-           <GiSailboat className='mx-auto scale-x-[2] mt-[1px] scale-y-[1] text-[#FF0000] text-base	'/>)}
+           <p className='my-auto '>{props.parking.nom}</p>:
+           <GiSailboat className=' scale-x-[2]  scale-y-[1] text-[#FF0000] text-base	'/>)}
           {(props.parking.color === "#FFA500") && (isHovered ?
-           <p className='mt-1'>{props.parking.nom}</p>:
-           <GiSailboat className='mx-auto scale-x-[2] mt-[1px] scale-y-[1] text-[#FFA500] text-base	'/>)}
-          {(props.parking.color === "#00FF00" || props.parking.color == null || props.parking.color === "#A1A1AA" )&& 
-          <p className='mt-1 '>{props.parking.nom}</p>}
+           <p className='my-auto '>{props.parking.nom}</p>:
+           <GiSailboat className=' scale-x-[2] scale-y-[1] text-[#FFA500] text-base	'/>)}
+          {(props.parking.color === "#00FF00" || props.parking.color == null 
+          || props.parking.color === "#A1A1AA" )&& 
+          <p className='my-auto '>{props.parking.nom}</p>}
         </p>
         {isOpen && <ParkingModal 
         closeModal={closeModal} 
