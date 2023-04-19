@@ -1,22 +1,23 @@
 import React from 'react';
-import SingleParking from './SingleParking';
-import planImg from '../resources/planEmpty3.png';
+import GroupParking from './GroupParking';
+import planImg from '../resources/planSmirEmpty.jpg';
+import places from '../resources/place.js';
+
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
 function Bassin({generatedCells}) {
-    
+    console.log(generatedCells)
     const Cells = () => {
-        const cells = generatedCells.map(aff => {
+        const cells = generatedCells.map(group => {
             return (
-                <SingleParking 
-                    key={aff.nom}
-                    parking={aff}
-                    ></SingleParking>
+                <GroupParking 
+                    key={group.groupeId}
+                    group={group}
+                    ></GroupParking>
             )
         })
         return cells 
     }
-
     return (
     <div className=' h-full overflow-auto w-full flex justify-center'>
         <TransformWrapper>

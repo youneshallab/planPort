@@ -50,7 +50,7 @@ function App() {
   // API CALL updates on Date update
   useEffect(() => {
     if(dateState !== null){
-      instance.get(`/affectationsplan?date=${moment(dateState).format("yyyy-MM-DD")}&bassin=BAF`)
+      instance.get(`/affectationsplan?date=${moment(dateState).format("yyyy-MM-DD")}`)
       .then(response => {
         if(response.status === 200){
           setGeneratedCells(response.data)

@@ -3,20 +3,24 @@
 @tailwind utilities;
 
 @layer base {
-    .crossed {
-        background: 
-            linear-gradient(to top left,
-                rgba(0,0,0,0) 0%,
-                rgba(0,0,0,0) calc(50% - 2px),
-                rgba(170, 170, 170, 0.7) 50%,
-                rgba(0,0,0,0) calc(50% + 2px),
-                rgba(0,0,0,0) 100%),
-            linear-gradient(to top right,
-                rgba(0,0,0,0) 0%,
-                rgba(0,0,0,0) calc(50% - 2px),
-                rgba(170, 170, 170, 0.7) 50%,
-                rgba(0,0,0,0) calc(50% + 2px),
-                rgba(0,0,0,0) 100%);
+  .crossed {
+    background: 
+        linear-gradient(to top left,
+            rgba(0,0,0,0) 0%,
+            rgba(0,0,0,0) calc(50% - 2px),
+            rgb(121, 121, 121) calc(50% - 1px),
+            rgb(120, 120, 120) 50%,
+            rgb(120, 120, 120) calc(50% + 1px),
+            rgba(0,0,0,0) calc(50% + 2px),
+            rgba(0,0,0,0) 100%),
+        linear-gradient(to top right,
+            rgba(0,0,0,0) 0%,
+            rgba(0,0,0,0) calc(50% - 2px),
+            rgb(121, 121, 121) calc(50% - 1px),
+            rgb(120, 120, 120) 50%,
+            rgb(120, 120, 120) calc(50% + 1px),
+            rgba(0,0,0,0) calc(50% + 2px),
+            rgba(0,0,0,0) 100%);
     }
     .lds-spinner {
         color: white;
