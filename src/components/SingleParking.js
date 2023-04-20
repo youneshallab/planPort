@@ -12,7 +12,7 @@ function SingleParking({place,width,groupAngle}) {
   var boatClassName =''
   var nomClassName=' text-[10px] text-blue-900 my-auto mx-auto '
   if(groupAngle < 0.25){
-    nomClassName = nomClassName.concat(' rotate-90 ')
+    nomClassName = nomClassName.concat(' ')
   }else{
     if(groupAngle < 0.5){
       nomClassName = nomClassName.concat(' -rotate-90 ')

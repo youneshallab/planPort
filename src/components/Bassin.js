@@ -1,6 +1,6 @@
 import React from 'react';
 import GroupParking from './GroupParking';
-import planImg from '../resources/planSmirEmpty.jpg';
+import planImg from '../resources/smirhd2.jpg';
 import places from '../resources/place.js';
 
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
