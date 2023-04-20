@@ -25,6 +25,7 @@ function GroupParking({group}) {
                     key={place.id}
                     place={place}
                     width={group.width/group.listPlaces.length}
+                    groupAngle={group.angle}
                     ></SingleParking>
             )
         })

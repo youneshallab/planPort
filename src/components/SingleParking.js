@@ -4,13 +4,26 @@ import ParkingModal from '../resources/ParkingModal';
 import boat from '../resources/boat.svg';
 import Tooltip from '@mui/material/Tooltip';
 
-function SingleParking({place,width}) {
+function SingleParking({place,width,groupAngle}) {
   const ref = useRef(null);
   const [isOpen, setIsOpen] = React.useState(false);
   const [isHovered, setIsHovered] = React.useState(false);
   const [closeRequest, setCloseRequest] = React.useState(false);
   var boatClassName =''
-  var nomClassName=''
+  var nomClassName=' text-[10px] text-blue-900 my-auto mx-auto '
+  if(groupAngle < 0.25){
+    nomClassName = nomClassName.concat(' rotate-90 ')
+  }else{
+    if(groupAngle < 0.5){
+      nomClassName = nomClassName.concat(' -rotate-90 ')
+    }else{
+      if(groupAngle < 0.75){
+        nomClassName = nomClassName.concat(' rotate-180 ')
+      }else{
+        nomClassName = nomClassName.concat(' rotate-90 ')
+      }
+    }
+  }
   useEffect(() => {
     // SET ROW ********************************************************************************
     const tempCell = `cell${place?.id}`
@@ -96,6 +109,9 @@ function SingleParking({place,width}) {
           <p className='text-zinc-100 text-center h-full w-full align-middle truncate text-[8px] flex content-center justify-center'> 
           {(place?.color === "#FF0000") && <img className={boatClassName} src={boat} alt="SVG logo"/>}
           {(place?.color === "#FFA500") && <img className={boatClassName} src={boat} alt="SVG logo"/>}
+          {((place.color === "#00FF00" || place.color == null 
+              || place.color === "#A1A1AA" )&& width > 19) &&
+              <p className={nomClassName}>{place.nom}</p>}
           </p>
         </span>
       </div>
