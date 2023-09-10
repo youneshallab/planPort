@@ -110,7 +110,7 @@ function SingleParking({place,width,groupAngle}) {
           {(place?.color === "#FF0000") && <img className={boatClassName} src={boat} alt="SVG logo"/>}
           {(place?.color === "#FFA500") && <img className={boatClassName} src={boat} alt="SVG logo"/>}
           {((place.color === "#00FF00" || place.color == null 
-              || place.color === "#A1A1AA" )&& width > 19) &&
+              || place.color === "#A1A1AA" )&& width > 16) &&
               <p className={nomClassName}>{place.nom}</p>}
           </p>
         </span>
